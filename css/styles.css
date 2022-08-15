@@ -146,18 +146,18 @@ body {
 }
 
 /* border radius mobile */
-.br--left-side {
-  border-radius: 0.5m 0.5em 0 0;
+.br--col-1 {
+  border-radius: 0.5em 0.5em 0 0;
 }
-.br--right-side {
+.br--col-3 {
   border-radius: 0 0 0.5em 0.5em;
 }
 @media (min-width: 992px) {
   /* border radius desktop */
-  .br--left-side {
+  .br--col-1 {
     border-radius: 0.5em 0 0 0.5em;
   }
-  .br--right-side {
+  .br--col-3 {
     border-radius: 0 0.5em 0.5em 0;
   }
 }
@@ -183,6 +183,7 @@ body {
   background-color: var(--button-background);
   text-decoration: none;
   text-transform: capitalize;
+  transition: all 0.4s ease
 }
 .button:hover {
   background-color: transparent;
