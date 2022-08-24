@@ -1,149 +1,51 @@
-/* Box sizing rules */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-/* Remove default margin */
-body,
-h1,
-h2,
-h3,
-h4,
-p,
-figure,
-blockquote,
-dl,
-dd {
-  margin: 0;
-}
-
-/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role="list"],
-ol[role="list"] {
-  list-style: none;
-}
-
-/* Set core root defaults */
-html:focus-within {
-  scroll-behavior: smooth;
-}
-
-/* Set core body defaults */
-body {
-  min-height: 100vh;
-  text-rendering: optimizeSpeed;
-  line-height: 1.5;
-}
-
-/* A elements that don't have a class get default styles */
-a:not([class]) {
-  text-decoration-skip-ink: auto;
-}
-
-/* Make images easier to work with */
-img,
-picture,
-svg {
-  max-width: 100%;
-  display: block;
-}
-
-/* Inherit fonts for inputs and buttons */
-input,
-button,
-textarea,
-select {
-  font: inherit;
-}
-
-/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
-@media (prefers-reduced-motion: reduce) {
-  html:focus-within {
-    scroll-behavior: auto;
-  }
-
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
-}
-
 :root {
   --body-background: hsl(0, 0%, 95%);
   --button-background: hsl(0, 0%, 95%);
   --body-color: hsla(0, 0%, 100%, 0.75);
   --headlines-color: hsl(0, 0%, 95%);
-  --color-bright: hsl(31, 77%, 52%);
-  --color-medium: hsl(184, 100%, 22%);
-  --color-dark: hsl(179, 100%, 13%);
+  --color-orange: hsl(31, 77%, 52%);
+  --color-medium-green: hsl(184, 100%, 22%);
+  --color-dark-green: hsl(179, 100%, 13%);
 
   --ff-headlines: "Big Shoulders Display", cursive;
   --ff-body: "Lexend Deca", sans-serif;
   --ff-secondary: "Big Shoulders Display", cursive;
+	
+  --text-orange: var(--color-orange);
+  --text-medium-green: var(--color-medium-green);
+  --text-dark-green: var(--color-dark-green);
 }
 
-.bg-bright {
-  background-color: var(--color-bright);
+.bg-orange {
+  background-color: var(--color-orange);
 }
-.bg-bright a.button {
-  color: var(--color-bright);
+.bg-orange a.button {
+  color: var(--color-orange);
 }
-.bg-medium {
-  background-color: var(--color-medium);
+.bg-medium-green {
+  background-color: var(--color-medium-green);
 }
 .bg-medium a.button {
   color: var(--color-medium);
 }
-.bg-dark {
-  background-color: var(--color-dark);
+.bg-dark-green {
+  background-color: var(--color-dark-green);
 }
 .bg-dark a.button {
-  color: var(--color-dark);
+  color: var(--color-dark-green);
 }
 
 body {
   background-color: var(--body-background);
   font-family: var(--ff-body);
   font-size: 16px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  min-height: 100vh;
   padding: 5em 1em;
 }
-.container {
-  max-width: 992px;
-  margin: 0 auto 1em;
-  width: auto;
-}
-@media (min-width: 992px) {
-  .even-columns {
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: 1fr;
-  }
-}
-.visually-hidden {
-  clip: rect(1px, 1px, 1px, 1px);
-  clip-path: inset(50%);
-  height: 1px;
-  width: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
+
+.container-lg {
+	max-width: 920px;
 }
 
-.column {
-  padding: 3em;
-}
 
 /* border radius mobile */
 .br--col-1 {
@@ -152,7 +54,7 @@ body {
 .br--col-3 {
   border-radius: 0 0 0.5em 0.5em;
 }
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   /* border radius desktop */
   .br--col-1 {
     border-radius: 0.5em 0 0 0.5em;
@@ -161,6 +63,7 @@ body {
     border-radius: 0 0.5em 0.5em 0;
   }
 }
+
 .column-img {
   margin-bottom: 2em;
 }
@@ -169,28 +72,44 @@ body {
   color: var(--headlines-color);
   font-family: var(--ff-headlines);
   font-size: 2.5rem;
-  margin-bottom: 1em;
 }
 .column--text {
   color: var(--body-color);
-  margin-bottom: 5.5em;
-  max-width: 40ch;
 }
-.button {
-  padding: 0.75em 1.5em;
-  border-radius: 2em;
-  border: solid 2px var(--button-background);
-  background-color: var(--button-background);
-  text-decoration: none;
-  text-transform: capitalize;
-  transition: all 0.4s ease
+
+/* buttons */
+.btn, 
+.column--text {
+	font-size: 15px;
 }
-.button:hover {
-  background-color: transparent;
+.btn {
+	color: #000;
+	background-color: #f8f9fa;
+	border-color: #f8f9fa;
 }
-.bg-bright a.button:hover,
-.bg-medium a.button:hover,
-.bg-dark a.button:hover {
-  border: solid 2px white;
-  color: var(--button-background);
+.btn-orange {
+	color: var(--text-orange);
+}
+.btn-medium-green {
+	color: var(--text-medium-green);
+}
+.btn-dark-green {
+	color: var(--text-dark-green);
+}
+.btn:hover {
+	color: #f9fafb;
+	background-color: transparent;
+	border-color: #f9fafb;
+}
+
+
+
+
+
+.attribution {
+	font-size: 11px;
+	text-align: center;
+}
+.attribution a {
+	color: hsl(228, 45%, 44%);
 }
