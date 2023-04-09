@@ -1,5 +1,5 @@
 ### Screenshot
-![](screenshots/3-column-preview-card-component--warehouse-827--screenshot.png)
+![](screenshots/3-column-preview-card-component--warehouse-827--screenshot--v2.png)
 
 # Frontend Mentor - 3-column preview card component solution
 
@@ -27,10 +27,9 @@ This is a solution to the [3-column preview card component challenge on Frontend
 
 ### Built with
 
-- Bootstrap 5.2
 - CSS custom properties
 - Flexbox
-- Mobile-first workflow
+- a11y & semantic html
 
 ## Author
 
