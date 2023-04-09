@@ -1,47 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap" rel="stylesheet" />
-<!-- displays site properly based on user's device -->
-
-<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
-<title>Frontend Mentor | 3-column preview card component | Warehouse 827</title>
-
-<!-- Bootstrap CSS -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-<link href="css/styles.css" rel="stylesheet" type="text/css" />
-</head>
-<body class="d-block d-md-flex justify-content-center align-items-center vh-100 p-4">
-<div class="container-lg">
-    <header>
-        <h1 class="visually-hidden">Frontend Mentor 3-column preview card</h1>
-    </header>
-    <main>
-        <div class="row row-cols-1 row-cols-md-3">
-            <div class="bg-orange br--col-1 p-5"> <img src="images/icon-sedans.svg" alt="sedan icon" class="column-img" />
-                <p class="column--title">Sedans</p>
-                <p class="column--text mb-5">Choose a sedan for its affordability and excellent fuel economy. Ideal for cruising in the city or on your next road trip.</p>
-                <p><a href="#" role="button" class="btn btn-orange rounded-pill text-capitalize mt-4 border-2">learn more</a></p>
-            </div>
-            <div class="bg-medium-green br--col-2 p-5"> <img src="images/icon-suvs.svg" alt="suv icon" class="column-img" />
-                <p class="column--title">SUVs</p>
-                <p class="column--text mb-5">Take an SUV for its spacious interior, power, and versatility. Perfect for your next family vacation and off-road adventures.</p>
-                <p><a href="#" role="button" class="btn btn-medium-green rounded-pill text-capitalize mt-4 border-2">learn more</a></p>
-            </div>
-            <div class="bg-dark-green br--col-3 p-5"> <img src="images/icon-luxury.svg" alt="luxury icon" class="column-img" />
-                <p class="column--title">Luxury</p>
-                <p class="column--text mb-5">Cruise in the best car brands without the bloated prices. Enjoy the enhanced comfort of a luxury rental and arrive in style.</p>
-                <p><a href="#" role="button" class="btn btn-dark-green rounded-pill text-capitalize mt-4 border-2" >learn more</a></p>
-            </div>
-        </div>
-    </main>
-    <footer class="attribution pt-3 d-block pb-4">Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="https://www.frontendmentor.io/profile/warehouse827">Warehouse 827</a>.</footer>
-</div>
-<!-- Option 1: Bootstrap Bundle with Popper --> 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="author" content="Warehouse 827" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap"
+      rel="stylesheet"
+    />
+    <!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>3-Column Preview Card Component Solution by Warehouse 827</title>
+    <meta
+      name="description"
+      content="Semantic HTML • Accessibility. Frontend Mentor 3-Column Preview Card Component Solution."
+    />
+    <link href="css/styles.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="flex-container">
+      <header>
+        <h1>Frontend Mentor 3-Column Preview Card</h1>
+      </header>
+      <main>
+        <section class="card">
+          <img
+            src="images/ajoy-joseph-KnbwsTb72U8-unsplash.jpg"
+            alt="sedan icon"
+            class="card-img"
+          />
+          <div class="card-body">
+            <h2>Sedans</h2>
+            <p>
+              Choose a <a href="#" role="button">Sedan</a> for its affordability
+              and excellent fuel economy.
+            </p>
+            <p>Ideal for cruising in the city or on your next road trip.</p>
+          </div>
+        </section>
+        <section class="card">
+          <img
+            src="images/travis-essinger-3V0FGLkueyA-unsplash.jpg"
+            alt="suv icon"
+            class="card-img"
+          />
+          <div class="card-body">
+            <h2>SUVs</h2>
+            <p>
+              Take an <a href="#" role="button">SUV</a> for its spacious
+              interior, power, and versatility.
+            </p>
+            <p>
+              Perfect for your next family vacation and off-road adventures.
+            </p>
+          </div>
+        </section>
+        <section class="card">
+          <img
+            src="images/steady-hand-co-RKVEmmaJqGc-unsplash.jpg"
+            alt="luxury icon"
+            class="card-img"
+          />
+          <div class="card-body">
+            <h2>Luxury</h2>
+            <p>Cruise in the best car brands without the bloated prices.</p>
+            <p>
+              Enjoy the enhanced comfort of a
+              <a href="#" role="button">Luxury</a> rental and arrive in style.
+            </p>
+          </div>
+        </section>
+      </main>
+      <footer>
+        <small
+          >by
+          <a
+            href="https://www.frontendmentor.io?ref=challenge"
+            target="_blank"
+            aria-label="Frontend Mentor. Opens in new window"
+            >Frontend Mentor</a
+          >. Coded by
+          <a
+            href="https://www.frontendmentor.io/profile/warehouse827"
+            target="_blank"
+            aria-label="Warehouse 827 Link. Opens in new window"
+            >Warehouse 827</a
+          >.</small
+        >
+      </footer>
+    </div>
+  </body>
 </html>
